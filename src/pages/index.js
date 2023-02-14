@@ -4,9 +4,23 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 
+{/** Imagenes */}
+import react_icon from '../assets/img/technologies/icons-react.svg'
+import tailwind_icon from '../assets/img/technologies/icons8-tailwindcss.svg'
+import css_icon from '../assets/img/technologies/icons-css3.svg'
+import html_icon from '../assets/img/technologies/html.png'
+import js_icon from '../assets/img/technologies/icons-javascript.svg'
+
+{/** Image component */}
+import { Icon } from '@/components/Icon'
+
+
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -18,6 +32,37 @@ export default function Home() {
 
 
       <main className={styles.main}>
+
+      {/**Banner section */}
+      <section className='flex w-full py-5 px-5 justify-center'>
+        {/** personal statement */}
+          <div className='w-[800px]'> 
+
+            <h1 className='mb-4 text-xl font-medium md:tex-6x1 text-white'>Alejandro</h1>
+
+                <p className='text-lg font-medium opacity-60 dark:opacity-80 
+                md:text-xl text-white my-8'>
+                I am currently searching an intership opportunity where I can put my knowledge into practice,
+                with the purpose of expanding my knowledge. This intership will provide me
+                with the chance of delovep myself as a person
+                </p>
+                
+                <h2 className='text-xl font-medium 
+                md:tex-6x1 text-white my-8 '>Skills and Uses</h2>
+
+                <div className='flex justify-between'>
+
+                <Icon src={react_icon} alt='React' />
+                <Icon src={tailwind_icon} alt='Tailwind CSS' />
+                <Icon src={css_icon} alt='CSS' />
+                <Icon src={html_icon} alt='HTML' width={48} height={20} />
+                <Icon src={js_icon} alt='JavaScript' />
+
+                </div>
+          </div>
+      </section>
+
+
       
       </main>
       

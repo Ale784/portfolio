@@ -1,3 +1,6 @@
+
+
+
 export const NavLinks = [
     {
         id: "home",
@@ -7,8 +10,4 @@ export const NavLinks = [
         id: "projects",
         title: "projects"
     },
-    {
-        id: "skills",
-        title: "skills"
-    }
 ]
