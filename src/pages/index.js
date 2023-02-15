@@ -8,11 +8,16 @@ import styles from '@/styles/Home.module.css'
 import react_icon from '../assets/img/technologies/icons-react.svg'
 import tailwind_icon from '../assets/img/technologies/icons8-tailwindcss.svg'
 import css_icon from '../assets/img/technologies/icons-css3.svg'
-import html_icon from '../assets/img/technologies/html.png'
+import html_icon from '../assets/img/technologies/html-icon.svg'
 import js_icon from '../assets/img/technologies/icons-javascript.svg'
 
 {/** Image component */}
-import { Icon } from '@/components/Icon'
+import { Icon } from '@/components/icons/Icon'
+
+[/**Framer motion */]
+import { motion } from "framer-motion"
+import { Projects } from '@/components/Work'
+
 
 
 
@@ -31,14 +36,27 @@ export default function Home() {
       </Head>
 
 
-      <main className={styles.main}>
+      <main className='flex w-full py-5 px-5 content-center flex-col items-center gap-9'>
 
       {/**Banner section */}
-      <section className='flex w-full py-5 px-5 justify-center'>
+      <section>
+
         {/** personal statement */}
-          <div className='w-[800px]'> 
+          <div className='max-w-4xl'> 
 
             <h1 className='mb-4 text-xl font-medium md:tex-6x1 text-white'>Alejandro</h1>
+          
+
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                    hidden: { opacity: 0, x: -50  },
+                    visible: { opacity: 1, x:1 }     
+                }}   
+            >
 
                 <p className='text-lg font-medium opacity-60 dark:opacity-80 
                 md:text-xl text-white my-8'>
@@ -46,24 +64,44 @@ export default function Home() {
                 with the purpose of expanding my knowledge. This intership will provide me
                 with the chance of delovep myself as a person
                 </p>
-                
-                <h2 className='text-xl font-medium 
-                md:tex-6x1 text-white my-8 '>Skills and Uses</h2>
+
+            </motion.div>
+            
+
+            {/** Skills section */}
+
+            <h2 className='text-xl font-medium 
+            md:tex-6x1 text-white my-8 '>Skills and Uses</h2>
+
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+              >
 
                 <div className='flex justify-between'>
 
                 <Icon src={react_icon} alt='React' />
                 <Icon src={tailwind_icon} alt='Tailwind CSS' />
                 <Icon src={css_icon} alt='CSS' />
-                <Icon src={html_icon} alt='HTML' width={48} height={20} />
+                <Icon src={html_icon} alt='HTML' />
                 <Icon src={js_icon} alt='JavaScript' />
 
                 </div>
+
+            </motion.div>
+
           </div>
+
+      </section>
+      
+      {/** Projects and experience section */}
+      <section>
+
+          <Projects />
+          
       </section>
 
-
-      
       </main>
       
       <footer className={styles.footer}>

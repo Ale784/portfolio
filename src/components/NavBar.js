@@ -25,7 +25,7 @@ export const NavBar = () => {
 
         {/**desktop view */}
         
-            <div className='w-[800px] sm:flex hidden  items-center
+            <div className='w-[896px] sm:flex hidden  items-center
                  justify-between'> 
 
                 <h1 className='text-white text-[20px]'>Ale</h1>
