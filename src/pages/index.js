@@ -10,6 +10,7 @@ import tailwind_icon from '../assets/img/technologies/icons8-tailwindcss.svg'
 import css_icon from '../assets/img/technologies/icons-css3.svg'
 import html_icon from '../assets/img/technologies/html-icon.svg'
 import js_icon from '../assets/img/technologies/icons-javascript.svg'
+import pokedex  from '../assets/img/projectsImages/tic-tac-toe.png'
 
 {/** Image component */}
 import { Icon } from '@/components/icons/Icon'
@@ -94,18 +95,28 @@ export default function Home() {
           </div>
 
       </section>
-      
       {/** Projects and experience section */}
-      <section>
+      <article className='w-full flex flex-col gap-7'>
 
-          <Projects />
-          
-      </section>
+        <h2 className="text-center text-white text-xl">Projects</h2>
+        
+          <Projects
+          name='tic-tac-toe'
+          description='REACT, Vanilla CSS'
+          image={
+            pokedex
+          }
+
+          Link='https://github.com/Ale784/tic-tac-toe'
+
+          className='rounded-xl object-cover"'
+           />
+           
+      </article>
 
       </main>
       
       <footer className={styles.footer}>
-
       </footer>
     </>
   )
