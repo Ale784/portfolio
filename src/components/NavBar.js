@@ -83,7 +83,7 @@ export const NavBar = () => {
                         />
                 </div>
                 
-
+                
                     
                     <div 
                     className={`${toggle ? 'flex' : 'hidden'} p-6
@@ -114,7 +114,40 @@ export const NavBar = () => {
                     </div>
 
                 </div>
+
                 
+                
+                {/** bottom nav */}
+                {/* <div 
+                className='fixed bottom-2  w-full py-5 px-5 overflow-hidden z-50
+                '>
+
+                        <div className='sm:hidden flex flex-1  backdrop-blur-2x1
+                         items-center justify-center'>
+
+                            <ul className='list-none items-center flex gap-6 border-2 border-white rounded-full 
+                            backdrop-blur-2x1 py-4 px-5'>
+
+
+                                { NavLinks.map((nav, index) => (
+
+                                    <li
+                                    key={nav.id}
+                                    className={`font-sans font-normal cursor-pointer
+                                    text-[16px] text-white`}  
+                                    >
+                                        <a href={`#${nav.id}`}>
+                                        {nav.title}
+                                        </a>
+                                    </li>
+
+
+                            ))}
+
+                            </ul>
+                        </div>
+                            
+                    </div> */}
             </nav>
         </>
     )
