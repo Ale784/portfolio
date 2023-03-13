@@ -1,15 +1,16 @@
 import Head from 'next/head'
 import { imagePaths } from '@/components/constants/constants'
 
-import { Icon } from '@/components/icons/Icon'
+import { Icon } from '@/components/SkillsImage'
 import { motion } from 'framer-motion'
 import { Projects } from '@/components/Work'
 import { Contact } from '@/components/contact'
+import { SocialButtons } from '@/components/buttons'
 
 export default function Home () {
   const {
-    reactIcon, tailwindIcon, cssIcon, htmlIcon, jsIcon, gmail,
-    ticTacToe, github
+    reactIcon, tailwindIcon, cssIcon, htmlIcon, jsIcon,
+    ticTacToe
   } = imagePaths
 
   return (
@@ -21,69 +22,69 @@ export default function Home () {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='flex w-full py-5 px-5 content-center flex-col items-center gap-9'>
+      <main className='flex w-full py-5 px-5 content-center flex-col items-center gap-10'>
 
         {/** Banner section */}
-        <section id='home'>
+        <section className='max-w-4xl flex flex-col'>
 
           {/** personal statement */}
-          <div className='max-w-4xl'>
+          <h1 className='mb-4 text-xl font-medium md:tex-6x1 text-white'>Alejandro</h1>
 
-            <h1 className='mb-4 text-xl font-medium md:tex-6x1 text-white'>Alejandro</h1>
+          <motion.div
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 1 }
+            }}
+          >
 
-            <motion.div
-              initial='hidden'
-              whileInView='visible'
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, x: -50 },
-                visible: { opacity: 1, x: 1 }
-              }}
-            >
-
-              <p className='text-lg font-medium opacity-60 dark:opacity-80
+            <p className='text-lg font-medium opacity-60 dark:opacity-80
                 md:text-xl text-white my-8'
-              >
-                I am currently searching an intership opportunity where I can put my knowledge into practice,
-                with the purpose of expanding my knowledge. This intership will provide me
-                with the chance of delovep myself as a person
-              </p>
-
-            </motion.div>
-
-            {/** Skills section */}
-
-            <h2 className='text-xl font-medium
-            md:tex-6x1 text-white my-8 '
-            >Skills and Uses
-            </h2>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1 }}
             >
+              I am currently searching an intership opportunity where I can put my knowledge into practice,
+              with the purpose of expanding my knowledge. This intership will provide me
+              with the chance of delovep myself as a person
+            </p>
 
-              <div className='flex justify-between'>
+            <SocialButtons />
 
-                <Icon src={reactIcon} alt='React' />
-                <Icon src={tailwindIcon} alt='Tailwind CSS' />
-                <Icon src={cssIcon} alt='CSS' />
-                <Icon src={htmlIcon} alt='HTML' />
-                <Icon src={jsIcon} alt='JavaScript' />
-
-              </div>
-
-            </motion.div>
-
-          </div>
+          </motion.div>
 
         </section>
-        {/** Projects and experience section */}
-        <article className='w-full flex flex-col gap-7'>
 
-          <h2 className='text-center text-white text-xl'>Projects</h2>
+        {/** Skills section */}
+
+        <section className='w-full flex flex-col gap-10 max-w-4xl'>
+
+          <h2 className='text-3xl font-bold
+            md:tex-6x1 text-white'
+          >Skills and Uses
+          </h2>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className='flex justify-between flex-wrap'
+          >
+            <Icon src={reactIcon} alt='React' />
+            <Icon src={tailwindIcon} alt='Tailwind CSS' />
+            <Icon src={cssIcon} alt='CSS' />
+            <Icon src={htmlIcon} alt='HTML' />
+            <Icon src={jsIcon} alt='JavaScript' />
+
+          </motion.div>
+
+        </section>
+
+        {/** Projects and experience section */}
+
+        <sectione className='w-full flex flex-col gap-11' id='projects'>
+
+          <h2 className='text-center text-white text-3xl font-bold '>Projects</h2>
 
           <Projects
             name='tic-tac-toe'
@@ -95,30 +96,14 @@ export default function Home () {
             className='rounded-xl object-cover"'
           />
 
-        </article>
+        </sectione>
 
       </main>
 
-      <footer className='flex flex-col items-center gap-7 py-9'>
-        <h2 className='text-center text-white text-xl'> Get in touch </h2>
-        <p className='text-center text-white text-xl'>
-          I am seeking my first opportunity, if my profile fits with what you are looking for,
-          ¡Please do not hesitate to contact me!
-        </p>
-        <div className='flex gap-7'>
-          <Contact
-            social='Gmail'
-            image={
-                gmail
-              }
-          />
-          <Contact
-            social='Github'
-            image={
-              github
-              }
-          />
-        </div>
+      <footer className='flex w-full py-9 px-10 content-center justify-center'>
+
+        <Contact />
+
       </footer>
     </>
   )

@@ -7,11 +7,11 @@ import { imagePaths, NavLinks } from './constants/constants'
 export const NavBar = () => {
   const [toggle, setToggle] = useState(false)
   const {
-    github, menu, close
+    menu, close
   } = imagePaths
   return (
     <>
-      <nav className='w-full flex py-5 px-5 justify-center'>
+      <nav className='w-full flex py-5 px-5 justify-center' id='home'>
 
         {/** desktop view */}
 
@@ -19,7 +19,7 @@ export const NavBar = () => {
                  justify-between'
         >
 
-          <h1 className='text-white text-[20px]'>💻</h1>
+          <div>💻</div>
 
           <ul className='list-none flex gap-6 '>
 
@@ -39,13 +39,6 @@ export const NavBar = () => {
 
           </ul>
 
-          <Image
-            src={github}
-            alt='github'
-            className=''
-            width={39}
-            height={50}
-          />
         </div>
 
         {/** mobile view */}
@@ -54,8 +47,6 @@ export const NavBar = () => {
                 justify-between items-center'
         >
 
-          <h1 className='text-white text-[20px]'>📱</h1>
-
           <div className='flex gap-5'>
 
             <Image
@@ -63,14 +54,14 @@ export const NavBar = () => {
               alt='menu'
               className=''
               onClick={() => setToggle((prev) => !prev)}
-              width={60}
+              width={36}
               height={50}
             />
           </div>
 
           <div
             className={`${toggle ? 'flex' : 'hidden'} p-6
-                    bg-gray absolute top-20 right-0 mx-4
+                    bg-[#111d40] absolute top-20 left-0 mx-4
                     my-2 min-w-[140px] rounded-x1`}
           >
 

@@ -1,15 +1,15 @@
-import Image from "next/image"
 
-export const Contact = ({social, image}) =>{
-    return(
-        <div className="flex rounded-lg dark:bg-zinc-800 p-2 text-2xl
-         ring-zinc-500 transition-all duration-150 hover:ring-2 cursor-pointer">
-            <Image 
-                src={image}
-                alt={social}
-                width={20}
-                height={20}
-            />
-        </div>
-    )
+export const Contact = () => {
+  return (
+    <div className='max-w-4xl flex flex-col gap-11'>
+
+      <h2 className='text-3xl font-bold text-white'> Get in touch </h2>
+
+      <p className='text-center text-white text-xl'>
+        I am seeking my first opportunity, if my profile fits with what you are looking for,
+        ¡Please do not hesitate to contact me!
+      </p>
+
+    </div>
+  )
 }

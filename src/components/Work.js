@@ -3,7 +3,7 @@ import { imagePaths } from './constants/constants'
 
 export const Projects = ({ name, description, image, Link }) => {
   return (
-    <div className='' id='projects'>
+    <div className=''>
 
       <div className=' relative
             flex flex-col space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 max-w-4xl mx-auto border

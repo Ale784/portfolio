@@ -19,6 +19,6 @@ export const imagePaths = {
   gmail: '/generalImages/gmail-icon.svg',
   ticTacToe: '/projectsImages/tic-tac-toe.png',
   github: '/generalImages/github.svg',
-  menu: '/generalImages/github.svg',
-  close: '/generalImages/github.svg'
+  menu: '/generalImages/menu.svg',
+  close: '/generalImages/close.svg'
 }
