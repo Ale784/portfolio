@@ -1,6 +1,6 @@
 import { Container } from "./Container";
 
-export function Projects({ name, description, image }) {
+export function Projects({ name, description, image, Link }) {
   return (
     <Container className="relative pt-20 pb-16 text-center lg:pt-32">
       <div
@@ -12,7 +12,7 @@ export function Projects({ name, description, image }) {
           transition-all duration-300 relative"
         >
           <a
-            href="https://tic-tac-toe-ale784.vercel.app/"
+            href={Link}
             target="_blank"
             rel="noreferrer"
           >
