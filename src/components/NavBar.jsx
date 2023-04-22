@@ -1,6 +1,8 @@
 import { Container } from "./Container";
+import { navLinks } from "./constantes";
 
 export function NavBar() {
+
   return (
     <header className="text-white py-10 text-lg">
       <Container>
@@ -11,11 +13,18 @@ export function NavBar() {
           <div className="flex items-center md:gap-x-12">
             <div className="hidden md:flex md:gap-x-6">
               
-              <a href="#projects">projects</a>
-
-              <a href="#skills">skills</a>
-
-              <a href="#contact">contact</a>
+              {
+                navLinks.map(links => {
+                  return (
+                    <a key={links.id} 
+                      href={links.id}
+                      className="hover:text-red-800"               
+                      >
+                        {links.name}
+                    </a>
+                  )
+                })
+              }
             
             </div>
           </div>

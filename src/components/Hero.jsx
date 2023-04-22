@@ -1,4 +1,5 @@
 import { Container } from "./Container";
+import { motion } from "framer-motion"
 
 export function Hero() {
   return (
@@ -10,11 +11,19 @@ export function Hero() {
         Ale<span className="text-red-700">jandro</span>
       </h1>
 
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+      >
+
       <p className="max-w-xl mx-auto mt-6 text-lg tracking-tight text-white mb-6">
         I am currently searching an intership opportunity where I can put my
         knowledge into practice, that will allow me to apply my existing
         knowledge and gain new experiences
       </p>
+
+      </motion.div>
 
       <a className="relative cursor-pointer inline-flex items-center justify-center 
       p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group 

@@ -9,14 +9,14 @@ export function Work() {
         name="tic-tac-toe"
         description="REACT, Vanilla CSS"
         image={ticTacToe}
-        Link="https://github.com/Ale784/tic-tac-toe"
+        Link="https://tic-tac-toe-ale784.vercel.app/"
         className='rounded-xl object-cover"'
       />
       <Projects
         name="Movies App"
         description="REACT, Tailwind"
         image={MoviesImage}
-        Link="https://movies-app-ale784.vercel.app/"
+ npm
         className='rounded-xl object-cover"'
       />
     </>
