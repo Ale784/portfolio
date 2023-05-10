@@ -17,6 +17,7 @@ export function Work() {
         description="REACT, Tailwind"
         image={MoviesImage}
  npm
+        Link="https://movies-app-ale784.vercel.app/"
         className='rounded-xl object-cover"'
       />
     </>
